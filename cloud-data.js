@@ -20,11 +20,11 @@ CloudData = function(config){
      return firebase.database().ref().child("/" + key).push(val).key;
    };
    
-   this.setCloud = (key, val) => {
+   this.set = (key, val) => {
      firebase.database().ref().child("/" + key).set(val);
    };
    
-   this.getCloud = (key, defaultVal) => {
+   this.get = (key, defaultVal) => {
      return this.data[key] || defaultVal;
    };
 };
