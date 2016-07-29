@@ -11,7 +11,7 @@
  4) Add Cloud Data to your HTML between your `<head>` tags:
  
  ```html
- <script src=" https://cdn.rawgit.com/stevekrouse/cloud-data/f06fe37a6a3c2f33e01600b21869f978e099f8c1/cloud-data.js"></script>
+ <script src=" https://cdn.rawgit.com/stevekrouse/cloud-data/13aed51f0afd5e80f210cd9cf84b5d1835644b80/cloud-data.js"></script>
  ```
  		
  4) Create a new database:	
