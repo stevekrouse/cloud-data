@@ -28,8 +28,8 @@
  5) Set some data:		
  		
  ```javascript		
- database.set("high_score", 100);		
- database.set("player1", {x: mouseX, y: mouseY});		
+ database.set("highScore", 100)
+ database.set("player1", {x: mouseX, y: mouseY})
  ```		
  
  6) Add to a list:		
@@ -41,7 +41,16 @@
  7) Get some data:		
  		
  ```javascript		
- database.get("high_score", 0)         // returns 100, with a default of 0		
+ database.get("highScore", 0)         // returns 100, with a default of 0		
  database.get("player1", {x: 0, y: 0}) // returns  {x: 14, y: 104}, with a default of {x: 0, y: 0}		
  database.get("messages", [])          // returns [{name: "Steve", message: "Think different"}], with a default of []
+ ```
+
+ 7) React when the data changes:		
+ 		
+ ```javascript		
+ var highScore = database.get("highScore")
+ database.onChange(() => {
+  highScore = database.get("highScore")
+ })
  ```

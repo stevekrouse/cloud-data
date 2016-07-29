@@ -1,6 +1,11 @@
 CloudData = function(config){
    this.data = {};
    
+   this._onchanges = [];
+   this.onChange = (func) => {
+       this._onchanges.push(func);  
+   };
+   
    this.loadFirebaseLibrary = callback => {
      var lib = document.createElement("script");
      lib.type = "text/javascript";
@@ -13,6 +18,7 @@ CloudData = function(config){
      firebase.initializeApp(config);
      firebase.database().ref().on('value', snapshot => {
        this.data = snapshot.val() || {};
+       this._onchanges.forEach(func => func());
      });
    });
    
