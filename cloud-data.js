@@ -9,7 +9,7 @@ CloudData = function(config){
    this.loadFirebaseLibrary = callback => {
      var lib = document.createElement("script");
      lib.type = "text/javascript";
-     lib.src = "https://www.gstatic.com/firebasejs/live/3.0/firebase.js";
+     lib.src = "https://www.gstatic.com/firebasejs/3.4.0/firebase.js";
      lib.onload = callback;
      document.body.appendChild(lib);
    };
