@@ -17,7 +17,7 @@
  4) Create a new database:	
  		
  ```javascript		
- var database = CloudData({		
+ var database = new CloudData({		
      apiKey: "AIzaSyAWa4XzsdE5haWBWq4fTef2Ko1dpbsE4qM",		
      authDomain: "sample-a81f9.firebaseapp.com",		
      databaseURL: "https://sample-a81f9.firebaseio.com",		
