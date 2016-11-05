@@ -1,4 +1,4 @@
-CloudData = function(config){
+var CloudData = function(config){
    this.data = {};
    
    this._onchanges = [];
